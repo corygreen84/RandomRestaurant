@@ -81,6 +81,7 @@ class BottomButtons: NSObject {
         }
     }
     
+    
     func moveNextButtonToTheRight() {
         UIView.animate(withDuration: 0.2) {
             self.nextButton?.frame = CGRect(x: 0.0, y: (self.passedInView?.frame.origin.y)! + (self.passedInView?.frame.size.height)! - 75.0, width: (self.passedInView?.frame.size.width)!, height: 75.0)
