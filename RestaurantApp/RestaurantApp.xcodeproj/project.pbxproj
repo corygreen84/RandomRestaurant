@@ -16,6 +16,7 @@
 		E50C8D3F2495FDB100107EA8 /* RestaurantAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50C8D3E2495FDB100107EA8 /* RestaurantAppTests.swift */; };
 		E50C8D4A2495FDB100107EA8 /* RestaurantAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50C8D492495FDB100107EA8 /* RestaurantAppUITests.swift */; };
 		E50C8D582496029400107EA8 /* BottomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50C8D572496029400107EA8 /* BottomButtons.swift */; };
+		E556700024A7B6B900829791 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5566FFF24A7B6B900829791 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		E50C8D492495FDB100107EA8 /* RestaurantAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantAppUITests.swift; sourceTree = "<group>"; };
 		E50C8D4B2495FDB100107EA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E50C8D572496029400107EA8 /* BottomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomButtons.swift; sourceTree = "<group>"; };
+		E5566FFF24A7B6B900829791 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +110,8 @@
 				E50C8D302495FDB100107EA8 /* Assets.xcassets */,
 				E50C8D322495FDB100107EA8 /* LaunchScreen.storyboard */,
 				E50C8D352495FDB100107EA8 /* Info.plist */,
-				E50C8D572496029400107EA8 /* BottomButtons.swift */,
+				E5566FFC24A7B65C00829791 /* Buttons */,
+				E5566FFF24A7B6B900829791 /* LocationManager.swift */,
 			);
 			path = RestaurantApp;
 			sourceTree = "<group>";
@@ -129,6 +132,14 @@
 				E50C8D4B2495FDB100107EA8 /* Info.plist */,
 			);
 			path = RestaurantAppUITests;
+			sourceTree = "<group>";
+		};
+		E5566FFC24A7B65C00829791 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				E50C8D572496029400107EA8 /* BottomButtons.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +275,7 @@
 			files = (
 				E50C8D2C2495FDB000107EA8 /* ViewController.swift in Sources */,
 				E50C8D282495FDB000107EA8 /* AppDelegate.swift in Sources */,
+				E556700024A7B6B900829791 /* LocationManager.swift in Sources */,
 				E50C8D582496029400107EA8 /* BottomButtons.swift in Sources */,
 				E50C8D2A2495FDB000107EA8 /* SceneDelegate.swift in Sources */,
 			);

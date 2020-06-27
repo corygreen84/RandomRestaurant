@@ -41,7 +41,7 @@ class BottomButtons: NSObject {
         
         backButton = UIButton(frame: CGRect(x: (self.passedInView?.frame.size.width)!, y: (self.passedInView?.frame.origin.y)! + (self.passedInView?.frame.size.height)! - 75.0, width: 0.0, height: 75.0))
         backButton?.setTitle("Back", for: UIControl.State.normal)
-        backButton?.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        backButton?.setTitleColor(UIColor.white, for: UIControl.State.normal)
         backButton?.backgroundColor = UIColor.blue
         backButton?.addTarget(self, action: #selector(backButtonOnClick), for: UIControl.Event.touchUpInside)
         
