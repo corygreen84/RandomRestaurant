@@ -60,5 +60,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>This application requires the use of your GPS data to function</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This application requires the use of your GPS data to function</string>
 </dict>
 </plist>

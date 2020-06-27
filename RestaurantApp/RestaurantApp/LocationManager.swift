@@ -8,14 +8,13 @@
 
 import UIKit
 import CoreLocation
+import MapKit
 
 @objc protocol ReturnLocationDataDelegate{
     func returnLocationData(data:CLLocation)
 }
 
 class LocationManager: NSObject, CLLocationManagerDelegate {
-
-    static var sharedInstance = LocationManager()
     
     var delegate: ReturnLocationDataDelegate?
     
@@ -30,8 +29,12 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
         locationManager = CLLocationManager()
         locationManager?.delegate = self
         locationManager?.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager?.distanceFilter = kCLLocationAccuracyBestForNavigation
         locationManager?.requestAlwaysAuthorization()
-        
+    }
+    
+    func getLocationDataOnce() {
+        locationManager?.requestLocation()
     }
     
     func startLocationServices(){
@@ -42,5 +45,22 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     func stopLocationServices() {
         locationServicesOn = false
         locationManager?.stopUpdatingLocation()
+    }
+    
+    
+    // when the location status changes //
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        
+    }
+    
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        print(locations.last!)
+        
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("error -> \(error)")
     }
 }
