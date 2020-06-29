@@ -17,10 +17,15 @@ class ViewController: UIViewController, MKMapViewDelegate, ReturnLocationDataDel
     
     var locationData:LocationManager?
     
+    var usersLocation:CLLocation?
+    
+    var upperBar:UpperInfoBar?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         mainMap.delegate = self
+        mainMap.showsUserLocation = true
         
         // creating the bottom buttons //
         bottomButtons = BottomButtons(view: self.view)
@@ -30,10 +35,22 @@ class ViewController: UIViewController, MKMapViewDelegate, ReturnLocationDataDel
         locationData?.delegate = self
         locationData?.getLocationDataOnce()
         
+        upperBar = UpperInfoBar(view: self.view)
+        
     }
     
     // return data from the locationManager class //
     func returnLocationData(data: CLLocation) {
+        usersLocation = data
+        
+        // creating a coordinate2d based on their location //
+        let userLocationToCoordinate2d:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: usersLocation!.coordinate.latitude, longitude: usersLocation!.coordinate.longitude)
+        
+        // creating an mkCoordinateRegion based on the coordinate2d info //
+        let mkCoordinateRegion:MKCoordinateRegion = MKCoordinateRegion(center: userLocationToCoordinate2d, span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
+        
+        // setting the region to hte mainMap //
+        mainMap.setRegion(mkCoordinateRegion, animated: true)
         
     }
 

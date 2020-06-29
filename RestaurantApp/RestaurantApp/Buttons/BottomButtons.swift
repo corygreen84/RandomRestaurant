@@ -11,7 +11,6 @@ import UIKit
 class BottomButtons: NSObject {
     
     var passedInView:UIView?
-    
     var nextButton:UIButton?
     var backButton:UIButton?
     
@@ -34,7 +33,7 @@ class BottomButtons: NSObject {
         nextButton = UIButton(frame: CGRect(x: 0.0, y: (self.passedInView?.frame.origin.y)! + (self.passedInView?.frame.size.height)! - 75.0, width: (self.passedInView?.frame.size.width)!, height: 75.0))
         nextButton?.setTitle("Start", for: UIControl.State.normal)
         nextButton?.setTitleColor(UIColor.black, for: UIControl.State.normal)
-        nextButton?.backgroundColor = UIColor.green
+        nextButton?.backgroundColor = Colors.sharedInstance.green
         nextButton?.addTarget(self, action: #selector(nextButtonOnClick), for: UIControl.Event.touchUpInside)
         
         self.passedInView?.addSubview(nextButton!)
@@ -42,7 +41,7 @@ class BottomButtons: NSObject {
         backButton = UIButton(frame: CGRect(x: (self.passedInView?.frame.size.width)!, y: (self.passedInView?.frame.origin.y)! + (self.passedInView?.frame.size.height)! - 75.0, width: 0.0, height: 75.0))
         backButton?.setTitle("Back", for: UIControl.State.normal)
         backButton?.setTitleColor(UIColor.white, for: UIControl.State.normal)
-        backButton?.backgroundColor = UIColor.blue
+        backButton?.backgroundColor = Colors.sharedInstance.lightBlue
         backButton?.addTarget(self, action: #selector(backButtonOnClick), for: UIControl.Event.touchUpInside)
         
         self.passedInView?.addSubview(backButton!)

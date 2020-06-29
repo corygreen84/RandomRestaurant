@@ -53,10 +53,11 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
         
     }
     
-    
+    // gets the users location //
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        
-        print(locations.last!)
+
+        // returns the last location //
+        self.delegate?.returnLocationData(data: locations.last!)
         
     }
     

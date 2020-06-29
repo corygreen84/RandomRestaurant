@@ -16,6 +16,8 @@
 		E50C8D3F2495FDB100107EA8 /* RestaurantAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50C8D3E2495FDB100107EA8 /* RestaurantAppTests.swift */; };
 		E50C8D4A2495FDB100107EA8 /* RestaurantAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50C8D492495FDB100107EA8 /* RestaurantAppUITests.swift */; };
 		E50C8D582496029400107EA8 /* BottomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50C8D572496029400107EA8 /* BottomButtons.swift */; };
+		E53FC2E924A96E30007A1020 /* UpperInfoBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53FC2E824A96E30007A1020 /* UpperInfoBar.swift */; };
+		E53FC2EC24A97D9A007A1020 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53FC2EB24A97D9A007A1020 /* Colors.swift */; };
 		E556700024A7B6B900829791 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5566FFF24A7B6B900829791 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +54,8 @@
 		E50C8D492495FDB100107EA8 /* RestaurantAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantAppUITests.swift; sourceTree = "<group>"; };
 		E50C8D4B2495FDB100107EA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E50C8D572496029400107EA8 /* BottomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomButtons.swift; sourceTree = "<group>"; };
+		E53FC2E824A96E30007A1020 /* UpperInfoBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpperInfoBar.swift; sourceTree = "<group>"; };
+		E53FC2EB24A97D9A007A1020 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		E5566FFF24A7B6B900829791 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,7 +115,9 @@
 				E50C8D322495FDB100107EA8 /* LaunchScreen.storyboard */,
 				E50C8D352495FDB100107EA8 /* Info.plist */,
 				E5566FFC24A7B65C00829791 /* Buttons */,
-				E5566FFF24A7B6B900829791 /* LocationManager.swift */,
+				E53FC2E724A96E17007A1020 /* Location Stuff */,
+				E53FC2EA24A96E36007A1020 /* Upper Info Bar */,
+				E53FC2ED24A97E16007A1020 /* Colors */,
 			);
 			path = RestaurantApp;
 			sourceTree = "<group>";
@@ -132,6 +138,30 @@
 				E50C8D4B2495FDB100107EA8 /* Info.plist */,
 			);
 			path = RestaurantAppUITests;
+			sourceTree = "<group>";
+		};
+		E53FC2E724A96E17007A1020 /* Location Stuff */ = {
+			isa = PBXGroup;
+			children = (
+				E5566FFF24A7B6B900829791 /* LocationManager.swift */,
+			);
+			path = "Location Stuff";
+			sourceTree = "<group>";
+		};
+		E53FC2EA24A96E36007A1020 /* Upper Info Bar */ = {
+			isa = PBXGroup;
+			children = (
+				E53FC2E824A96E30007A1020 /* UpperInfoBar.swift */,
+			);
+			path = "Upper Info Bar";
+			sourceTree = "<group>";
+		};
+		E53FC2ED24A97E16007A1020 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				E53FC2EB24A97D9A007A1020 /* Colors.swift */,
+			);
+			path = Colors;
 			sourceTree = "<group>";
 		};
 		E5566FFC24A7B65C00829791 /* Buttons */ = {
@@ -273,8 +303,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E53FC2E924A96E30007A1020 /* UpperInfoBar.swift in Sources */,
 				E50C8D2C2495FDB000107EA8 /* ViewController.swift in Sources */,
 				E50C8D282495FDB000107EA8 /* AppDelegate.swift in Sources */,
+				E53FC2EC24A97D9A007A1020 /* Colors.swift in Sources */,
 				E556700024A7B6B900829791 /* LocationManager.swift in Sources */,
 				E50C8D582496029400107EA8 /* BottomButtons.swift in Sources */,
 				E50C8D2A2495FDB000107EA8 /* SceneDelegate.swift in Sources */,
