@@ -48,6 +48,19 @@ class BottomButtons: NSObject {
         
     }
     
+    
+    func disableButtons() {
+        nextButton?.isEnabled = false
+        nextButton?.setTitle("Aquiring location...", for: UIControl.State.normal)
+        backButton?.isEnabled = false
+    }
+    
+    func enableButtons() {
+        nextButton?.isEnabled = true
+        nextButton?.setTitle("Start", for: UIControl.State.normal)
+        backButton?.isEnabled = true
+    }
+    
     // next button on click //
     // adds to the next count //
     @objc func nextButtonOnClick() {

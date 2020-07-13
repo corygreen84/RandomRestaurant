@@ -49,15 +49,21 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     
     
     // when the location status changes //
-    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        
+        print(status)
         
     }
     
     // gets the users location //
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
 
-        // returns the last location //
-        self.delegate?.returnLocationData(data: locations.last!)
+        if(locationServicesOn!){
+            if(locations.last!.horizontalAccuracy >= 5.0){
+                self.stopLocationServices()
+                self.delegate?.returnLocationData(data: locations.last!)
+            }
+        }
         
     }
     

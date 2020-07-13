@@ -29,11 +29,13 @@ class ViewController: UIViewController, MKMapViewDelegate, ReturnLocationDataDel
         
         // creating the bottom buttons //
         bottomButtons = BottomButtons(view: self.view)
+        bottomButtons?.disableButtons()
         
         // starting up the location manager and adjusting mainmap settings //
         locationData = LocationManager()
         locationData?.delegate = self
-        locationData?.getLocationDataOnce()
+        //locationData?.getLocationDataOnce()
+        locationData?.startLocationServices()
         
         upperBar = UpperInfoBar(view: self.view)
         
@@ -43,6 +45,8 @@ class ViewController: UIViewController, MKMapViewDelegate, ReturnLocationDataDel
     func returnLocationData(data: CLLocation) {
         usersLocation = data
         
+        bottomButtons?.enableButtons()
+        
         // creating a coordinate2d based on their location //
         let userLocationToCoordinate2d:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: usersLocation!.coordinate.latitude, longitude: usersLocation!.coordinate.longitude)
         
@@ -51,6 +55,9 @@ class ViewController: UIViewController, MKMapViewDelegate, ReturnLocationDataDel
         
         // setting the region to hte mainMap //
         mainMap.setRegion(mkCoordinateRegion, animated: true)
+        
+        let getLocalRestaurants:GetLocalRestaurants = GetLocalRestaurants()
+        getLocalRestaurants.lookUpRestaurantsByLocation(location: usersLocation!)
         
     }
 

@@ -34,19 +34,20 @@ class UpperInfoBar: NSObject {
         upperBar?.layer.cornerRadius = 20.0
         upperBar?.clipsToBounds = true
         
+        
         // creating the main info label //
         mainInfoLabel = UILabel(frame: CGRect(x: 10.0, y: 10.0, width: (self.upperBar?.frame.size.width)! - 20.0, height: 30.0))
         mainInfoLabel?.text = "Round Table Pizza"
         mainInfoLabel?.textColor = Colors.sharedInstance.lightBlue
         mainInfoLabel?.textAlignment = .center
-        //mainInfoLabel?.backgroundColor = UIColor.blue
+
         
         // creating the secondary info label //
         secondaryInfoLabel = UILabel(frame: CGRect(x: 10.0, y: (self.mainInfoLabel?.frame.origin.y)! + (self.mainInfoLabel?.frame.size.height)! + 2.0, width: (self.mainInfoLabel?.frame.size.width)!, height: 20.0))
         secondaryInfoLabel?.text = "Pizza"
         secondaryInfoLabel?.textColor = UIColor.white
         secondaryInfoLabel?.textAlignment = .center
-        //secondaryInfoLabel?.backgroundColor = UIColor.blue
+
         
         // creating the left info label //
         // giving this label roughly 1/3 the width of the secondary info label //
@@ -54,7 +55,7 @@ class UpperInfoBar: NSObject {
         leftInfoLabel?.text = "5 Stars"
         leftInfoLabel?.textColor = UIColor.white
         leftInfoLabel?.textAlignment = .center
-        //leftInfoLabel?.backgroundColor = UIColor.blue
+
         
         // creating the center info label //
         // giving this label roughly 1/3 the width of the secondary info label //
@@ -62,7 +63,7 @@ class UpperInfoBar: NSObject {
         centerInfoLabel?.text = "Open Now"
         centerInfoLabel?.textColor = UIColor.white
         centerInfoLabel?.textAlignment = .center
-        //centerInfoLabel?.backgroundColor = UIColor.blue
+
         
         // creating the right info label //
         // giving this label roughly 1/3 the width of the secondary info label //
@@ -70,7 +71,7 @@ class UpperInfoBar: NSObject {
         rightInfoLabel?.text = "10 miles"
         rightInfoLabel?.textColor = UIColor.white
         rightInfoLabel?.textAlignment = .center
-        //rightInfoLabel?.backgroundColor = UIColor.blue
+
         
         
         
